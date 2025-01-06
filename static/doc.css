@@ -1,0 +1,162 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.75);
+    transition: opacity 0.75s, visibility 0.75s;
+    z-index: 1000;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #009578;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from { transform: rotate(0turn); }
+    to { transform: rotate(1turn); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+.header__cta {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.section.active {
+    display: block;
+}
+
+.animated-text {
+    animation: slideIn 1s ease-out;
+}
+
+.animated-icon {
+    font-size: 4rem;
+    color: #007bff;
+    animation: pulse 2s infinite;
+}
+
+.animated-button {
+    transition: transform 0.3s ease;
+}
+
+.animated-button:hover {
+    transform: scale(1.05);
+}
+
+.icon-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    animation: rotate 10s linear infinite;
+}
+
+.doctor-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#healthChart {
+    animation: fadeIn 1s ease-out;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__nav a {
+    margin-left: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .header__content {
+        flex-direction: column;
+    }
+    
+    .header__nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header__nav li {
+        margin: 0.5rem 0;
+    }
+}

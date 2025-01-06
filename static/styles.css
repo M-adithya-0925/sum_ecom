@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Product Card Styles */
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; /* Ensure all cards have the same height */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%; /* Ensure image takes full width of card */
+}
+
+/* Cart Styles */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+    padding: 2px 5px;
+    margin: 0 5px;
+}
+
+/* Account Styles */
+.account-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Animation for page transitions */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+/* Prediction Modal Styles */
+#predictionModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow for depth */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000; /* Darken color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+    .btn {
+        margin-top: 10px;
+    }
+    .modal-content {
+        width: 95%; /* Make modal wider on small screens */
+        margin: 5% auto; /* Position modal higher on small screens */
+    }
+}
+
+/* Additional styles for better readability and spacing */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-top: auto; /* Push buttons to bottom of card */
+}
+
+/* Style for prediction image */
+#predictionImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}

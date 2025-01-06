@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperCommerce - Your Ultimate Shopping Destination</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">SuperCommerce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="#" data-page="home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-page="products">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-page="categories">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-page="deals">Deals</a></li>
+                    </ul>
+                    <form class="d-flex me-3">
+                        <input class="form-control me-2" type="search" placeholder="Search products...">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-outline-primary me-2" data-page="cart"><i class="fas fa-shopping-cart"></i> Cart <span id="cart-count" class="badge bg-secondary">0</span></a>
+                        <a href="#" class="btn btn-outline-secondary" data-page="account"><i class="fas fa-user"></i> Account</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container mt-4">
+        <!-- Content will be dynamically inserted here -->
+    </main>
+    <div id="predictionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="predictionImage" src="" alt="Prediction Graph" style="width: 100%;">
+        </div>
+    </div>
+    <footer class="bg-light mt-5 py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>SuperCommerce is your one-stop shop for all your needs. We offer a wide range of products at competitive prices.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 SuperCommerce. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
